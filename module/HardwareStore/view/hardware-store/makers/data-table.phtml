@@ -1,0 +1,28 @@
+<!-- Vista de la tabla: "Manufacturers" -->
+<div class="data-table">
+	<div class="pagination-control">
+		<?php echo $this->paginationControl($this->page, 'Sliding', 'paginator') ?>
+	</div>
+	
+	<table class="table table-bordered table-condensed table-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>NOMBRE</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php $rownum = 1; ?>
+			<?php foreach ($page as $row) : ?>	
+				<tr>
+					<td><?php echo $rownum++; ?></td>
+					<td><?php echo $row['name']; ?></td>
+				</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+	
+	<div class="pagination-control">
+		<?php echo $this->paginationControl($this->page, 'Sliding', 'paginator') ?>
+	</div>
+</div>
